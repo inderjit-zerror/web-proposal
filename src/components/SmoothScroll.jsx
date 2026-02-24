@@ -2,16 +2,15 @@
 
 import React, { useEffect, useRef } from "react";
 import Lenis from "lenis";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname} from "next/navigation";
 
 export default function SmoothScroll() {
   const lenis = useRef(null);
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     if (lenis.current) lenis.current.scrollTo(0, { immediate: true });
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   useEffect(() => {
     if (window.innerWidth < 1024) return;
