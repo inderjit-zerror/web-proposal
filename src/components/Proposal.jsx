@@ -568,7 +568,7 @@ const Proposal = () => {
        scrollTrigger: {
         trigger: Card7.current,
         start: "top 30%",
-        end: "top 30%",
+        // end: "top 30%",
         toggleActions: "play none none reverse",
       },
     })
@@ -576,6 +576,7 @@ const Proposal = () => {
       ".llTimeline",
       {
         width: 0,
+        duration:1,
         ease: "none",
       },
       "a6",
