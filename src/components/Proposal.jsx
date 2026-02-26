@@ -454,7 +454,7 @@ const Proposal = () => {
       },
       "a6",
     );
-   
+
     tl.to(
       Card5.current,
       {
@@ -562,26 +562,25 @@ const Proposal = () => {
     // --------------------------------
   }, []);
 
-
-  useEffect(()=>{
+  useEffect(() => {
     const LIT = gsap.timeline({
-       scrollTrigger: {
+      scrollTrigger: {
         trigger: Card7.current,
         start: "top 30%",
         // end: "top 30%",
         toggleActions: "play none none reverse",
       },
-    })
-     LIT.from(
+    });
+    LIT.from(
       ".llTimeline",
       {
         width: 0,
-        duration:1,
+        duration: 1,
         ease: "none",
       },
       "a6",
     );
-  },[])
+  }, []);
 
   // =====================================================================================================
   const flickerRefs = useRef([]);
@@ -605,7 +604,7 @@ const Proposal = () => {
         className="w-[70vw] h-[75vh] bg-[#1A42C2] cardD p-10 rounded-[10px] absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 "
       >
         <div className=" noise-bg w-full md:h-full bg_blue  padding relative z-100 ">
-          <div className=" relative z-10 w-full hidden md:block  md:h-full p-3">
+          <div className=" relative z-10 w-full hidden md:block  md:h-full p-3 ">
             {footerRows.map((row) => (
               <div
                 key={row.id}
@@ -622,7 +621,7 @@ const Proposal = () => {
                       onMouseLeave={() => hoverOut(selector)}
                       className={`w-full hoverBg${
                         row.id
-                      }${i}  border relative  group border-white/10 rounded-md flex text-white  leading-tight
+                      }${i}  border relative  group border-white/10 rounded-md flex text-[#f5f5f59c] bg-[#1A42C2] leading-tight
                    
                     ${
                       isImage
@@ -643,7 +642,7 @@ const Proposal = () => {
                       {item.text && (
                         <span
                           ref={(el) => flickerRefs.current.push(el)}
-                          className={` flicker text-xs font-thin leading-tight tracking-wider  uppercase text-[#f5f5f5]  transition-all duration-300  ${item.align}
+                          className={` flicker text-xs font-thin leading-tight tracking-wider  uppercase text-[#f5f5f59c]  transition-all duration-300  ${item.align}
                         ${item.hover}
                      `}
                           style={{
@@ -714,7 +713,7 @@ const Proposal = () => {
         </div>
 
         <div className=" absolute top-0 left-0 z-100 w-full h-full flex justify-center items-center pointer-events-none select-none">
-          <p className="text-[2.5vw] text-white font-bold">ZERROR STUDIOS</p>
+          <p className="text-[3.5vw] text-white font-bold">ZERROR STUDIOS</p>
         </div>
       </div>
     );
@@ -724,38 +723,51 @@ const Proposal = () => {
     return (
       <div
         ref={Card2}
-        className="w-[70vw] h-[75vh] bg-[#f5f5f5] cardD p-10 gap-10 rounded-[10px] flex absolute top-[100%] left-1/2 -translate-x-1/2 "
+        className="w-[70vw] h-[75vh] bg-[#f5f5f5] cardD  rounded-[10px] flex absolute top-[100%] left-1/2 -translate-x-1/2 "
       >
         {/* left */}
         <div className="w-1/2 h-full bg-[#1A42C2] overflow-hidden group">
           <img
-            src={`/zerror.png`}
+            src={`/zerror1.jpg`}
             alt="Img"
             className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
           />
         </div>
+
         {/* right */}
-        <div className="w-1/2 h-full flex gap-10 text-[#1A42C2]">
-          {/* left */}
-          <div className="w-1/2 h-full flex flex-col gap-5 text-justify capitalize">
-            <p>
-              We Exist To end the trade off. At zerror, design and technology
-              move as one - from first thought to final uild. every decision in
-              intentional. every detail measured. every release stable.
-            </p>
-            <p>
-              To build zero-error digital products where design and technology
-              move as one.
-            </p>
-          </div>
-          {/* Right */}
-          <div className="w-1/2 h-full flex flex-col gap-5 text-justify capitalize">
-            <p>
+        <div className="w-1/2 h-full flex flex-col  text-[#1A42C2] p-10">
+          {/* top */}
+          <div className="w-full text-justify flex gap-10 text-[1vw] leading-[1vw] h-1/2">
+            <p className="w-2/3">
               We work wih startups studios and growing brands to design and bild
               degital products that are clear, scalable and impactful. from
               strategy to launch, we focus on thoughtful design, clean code, and
               meaningful user experiences.
             </p>
+            <p className="w-1/3 flex justify-end ">@2k26</p>
+          </div>
+          {/* bottom */}
+          <div className="w-full h-1/2 grid grid-cols-2 grid-rows-2 uppercase">
+            {/* 1 */}
+            <div className="w-full h-full border-[1px] border-[#1a41c22a] select-none cursor-pointer flex flex-col transition-all duration-500 ease-in hover:bg-[#4567d6] hover:text-[#f5f5f5] items-end text-[1vw] text-end leading-[1vw] p-5 text-[#1a41c2]">
+              <p className="font-bold mb-1">7+</p>
+              <p>Experience</p>
+            </div>
+            {/* 2 */}
+            <div className="w-full h-full border-t-[1px] border-r-[1px] select-none cursor-pointer border-[#1a41c22a] transition-all duration-500 ease-in hover:bg-[#4567d6] hover:text-[#f5f5f5]  flex flex-col items-end text-[1vw] text-end leading-[1vw] p-5 text-[#1a41c2]">
+              <p className="font-bold mb-1">50+</p>
+              <p>Clients</p>
+            </div>
+            {/* 3 */}
+            <div className="w-full h-full border-b-[1px] border-l-[1px] select-none cursor-pointer border-[#1a41c22a] transition-all duration-500 ease-in hover:bg-[#4567d6] hover:text-[#f5f5f5]  flex flex-col items-end text-[1vw] text-end leading-[1vw] p-5 text-[#1a41c2]">
+              <p className="font-bold mb-1">70+ </p>
+              <p>Projects</p>
+            </div>
+            {/* 4 */}
+            <div className="w-full h-full border-b-[1px] border-r-[1px] select-none cursor-pointer border-l-[1px] border-t-[1px] transition-all duration-500 ease-in text-[#f5f5f5] border-[#1a41c22a]  flex flex-col items-end text-[1vw] text-end leading-[1vw] p-5 bg-[#1a41c2]">
+              <p className=" mb-1">ZERROR</p>
+              <p className=" mb-1">STUDIOS</p>
+            </div>
           </div>
         </div>
       </div>
@@ -768,34 +780,21 @@ const Proposal = () => {
         ref={Card3}
         className="w-[70vw] h-[75vh] overflow-hidden cardD bg-[#1A42C2] gap-10 p-10 rounded-[10px] flex absolute top-[100%] left-1/2 -translate-x-1/2 "
       >
-        {/* Left */}
-        <div className="w-[30%] h-full">
-          {/* img */}
-          <div className=" w-full h-1/2 bg-white/50 group overflow-hidden">
-            <img
-              src={`/zerror.png`}
-              alt="IMG"
-              className="w-full h-full object-center object-cover group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
-            />
-          </div>
-          <div className="w-full h-1/2 text-white mt-5">
-            Lorem ipsum dolor sit amet consectetur
-          </div>
-        </div>
+        
         {/* Right */}
-        <div className="w-[70%] h-full flex flex-col">
+        <div className="w-full h-full flex flex-col">
           {/* img */}
-          <div className=" w-full h-1/2 bg-white/50 group overflow-hidden">
+          <div className=" w-full h-2/3 bg-white/50 group overflow-hidden">
             <img
-              src={`/cir.png`}
+              src={`/clientmeet.jpg`}
               alt="IMG"
               className="w-full h-full object-center object-cover group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
             />
           </div>
           {/* text */}
-          <div className=" w-full h-1/2 flex text-white gap-10">
+          <div className=" w-full h-1/3 flex text-white gap-10">
             {/* left-T */}
-            <div className="w-1/2 h-full mt-5 text-justify tracking-tight">
+            <div className="w-1/2 h-full mt-5 text-justify tracking-tight text-[1vw] leading-[1vw]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
               magni sit minima error repellat dolorem obcaecati perspiciatis
               reiciendis earum recusandae, alias facere! Et officiis voluptas
@@ -804,7 +803,7 @@ const Proposal = () => {
               laborum suscipit iste consectetur saepe ipsum.
             </div>
             {/* Right-T */}
-            <div className="w-1/2 h-full mt-5 text-justify tracking-tight">
+            <div className="w-1/2 h-full mt-5 text-justify tracking-tight text-[1vw] leading-[1vw]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
               magni sit minima error repellat dolorem obcaecati perspiciatis
               reiciendis earum recusandae, alias facere! Et officiis voluptas
@@ -913,15 +912,9 @@ const Proposal = () => {
           {/* left */}
           <div className="w-1/2 h-fit">Zerror Studios</div>
           {/* right */}
-          <div className="w-1/2 h-fit flex justify-end items-end gap-10">
-            {/* left */}
-            <div className="w-fit h-fit">
-              <p>15 Years of Experience</p>
-              <p>1500+ Projects</p>
-              <p>1500+ Happy Client's</p>
-            </div>
+          <div className="w-1/2 h-fit flex justify-end items-end gap-10">          
             {/* Right */}
-            <div className="w-fit h-fit">
+            <div className="w-fit h-fit flex gap-10">
               <p>Email</p>
               <p>WhatsApp</p>
               <p>Form</p>
@@ -932,45 +925,6 @@ const Proposal = () => {
     );
   };
 
-  // const ProposalCard5 = () => {
-  //   return (
-  //     <div
-  //       ref={Card5}
-  //       className="w-[70vw] h-[75vh] p-10 bg-[#1A42C2] cardD rounded-[10px] absolute top-[100%] left-1/2 -translate-x-1/2 "
-  //     >
-  //       {/* IMG_CONT */}
-  //       <div className="w-full h-[70%] flex gap-10">
-  //         {/* 1=img */}
-  //         <div className="w-1/4 h-full flex flex-col">
-  //           <div className="w-full h-full bg-white/50"></div>
-  //           <p className="mt-2 text-white">Normal</p>
-  //           <p className=" text-white">Text Normal</p>
-  //         </div>
-
-  //         {/* 2=img */}
-  //         <div className="w-1/4 h-full flex flex-col">
-  //           <div className="w-full h-[70%] bg-white/50"></div>
-  //           <p className="mt-2 text-white">Normal</p>
-  //           <p className=" text-white">Text Normal</p>
-  //         </div>
-
-  //         {/* 3=img */}
-  //         <div className="w-1/4 h-full flex flex-col">
-  //           <div className="w-full h-full bg-white/50"></div>
-  //           <p className="mt-2 text-white">Normal</p>
-  //           <p className=" text-white">Text Normal</p>
-  //         </div>
-
-  //         {/* 4=img */}
-  //         <div className="w-1/4 h-full flex flex-col">
-  //           <div className="w-full h-[70%] bg-white/50"></div>
-  //           <p className="mt-2 text-white">Normal</p>
-  //           <p className=" text-white">Text Normal</p>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   );
-  // };
   const ProposalCard5 = () => {
     const images = ["/p1.webp", "/p2.webp", "/p3.webp", "/p4.webp"];
     return (
@@ -998,7 +952,11 @@ const Proposal = () => {
   const Card = ({ img }) => (
     <div className=" aspect-[1/3] flex-shrink-0 flex flex-col group">
       <div className="w-full h-[40vh] overflow-hidden">
-        <img src={img} alt="IMG" className="w-full h-full object-cover group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform" />
+        <img
+          src={img}
+          alt="IMG"
+          className="w-full h-full object-cover group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
+        />
       </div>
       <p className="mt-2 text-white">Project</p>
       <p className="text-white">Zerror Studios</p>
@@ -1026,7 +984,11 @@ const Proposal = () => {
           {/* ImgCont */}
           <div className="w-full h-2/3">
             <div className="w-full h-full bg-[#1A42C2] overflow-hidden group ">
-              <img src={`/1.jpg`} alt="IMG" className="w-full h-full object-center object-cover group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform" />
+              <img
+                src={`/1.jpg`}
+                alt="IMG"
+                className="w-full h-full object-center object-cover group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
+              />
             </div>
           </div>
         </div>
@@ -1283,7 +1245,11 @@ const Proposal = () => {
 
           {/* bottom */}
           <div className="w-full h-1/2 overflow-hidden group">
-          <img src={`/zerror.png`} alt="IMG" className="w-full h-full object-center object-cover group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform" />
+            <img
+              src={`/zerror.png`}
+              alt="IMG"
+              className="w-full h-full object-center object-cover group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
+            />
           </div>
         </div>
       </div>
