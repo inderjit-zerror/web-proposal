@@ -256,17 +256,16 @@ const Proposal = () => {
       "a1",
     );
     tl.to(
-      '.symbol1',
+      ".symbol1",
       {
-        scale:'0.7',
+        scale: "0.7",
       },
       "a1",
     );
     tl.to(
-      '.symbol2',
+      ".symbol2",
       {
-        scale:'1',
-        
+        scale: "1",
       },
       "a1",
     );
@@ -299,18 +298,16 @@ const Proposal = () => {
       "a2",
     );
     tl.to(
-      '.symbol2',
+      ".symbol2",
       {
-        scale:'0.7',
-        
+        scale: "0.7",
       },
       "a2",
     );
     tl.to(
-      '.symbol3',
+      ".symbol3",
       {
-        scale:'1',
-        
+        scale: "1",
       },
       "a2",
     );
@@ -343,18 +340,16 @@ const Proposal = () => {
       "a3",
     );
     tl.to(
-      '.symbol3',
+      ".symbol3",
       {
-        scale:'0.7',
-        
+        scale: "0.7",
       },
       "a3",
     );
     tl.to(
-      '.symbol4',
+      ".symbol4",
       {
-        scale:'1',
-        
+        scale: "1",
       },
       "a3",
     );
@@ -386,18 +381,16 @@ const Proposal = () => {
       "a4",
     );
     tl.to(
-      '.symbol4',
+      ".symbol4",
       {
-        scale:'0.7',
-        
+        scale: "0.7",
       },
       "a4",
     );
     tl.to(
-      '.symbol5',
+      ".symbol5",
       {
-        scale:'1',
-        
+        scale: "1",
       },
       "a4",
     );
@@ -429,18 +422,16 @@ const Proposal = () => {
       "a5",
     );
     tl.to(
-      '.symbol5',
+      ".symbol5",
       {
-        scale:'0.7',
-        
+        scale: "0.7",
       },
       "a5",
     );
     tl.to(
-      '.symbol6',
+      ".symbol6",
       {
-        scale:'1',
-        
+        scale: "1",
       },
       "a5",
     );
@@ -463,14 +454,7 @@ const Proposal = () => {
       },
       "a6",
     );
-    tl.from(
-      '.llTimeline',
-      {
-        width:0,
-        ease: "none",
-      },
-      "a6",
-    );
+   
     tl.to(
       Card5.current,
       {
@@ -480,18 +464,16 @@ const Proposal = () => {
       "a6",
     );
     tl.to(
-      '.symbol6',
+      ".symbol6",
       {
-        scale:'0.7',
-        
+        scale: "0.7",
       },
       "a6",
     );
     tl.to(
-      '.symbol7',
+      ".symbol7",
       {
-        scale:'1',
-        
+        scale: "1",
       },
       "a6",
     );
@@ -523,18 +505,16 @@ const Proposal = () => {
       "a7",
     );
     tl.to(
-      '.symbol7',
+      ".symbol7",
       {
-        scale:'0.7',
-        
+        scale: "0.7",
       },
       "a7",
     );
     tl.to(
-      '.symbol8',
+      ".symbol8",
       {
-        scale:'1',
-        
+        scale: "1",
       },
       "a7",
     );
@@ -566,23 +546,41 @@ const Proposal = () => {
       "a8",
     );
     tl.to(
-      '.symbol8',
+      ".symbol8",
       {
-        scale:'0.7',
-       
+        scale: "0.7",
       },
       "a8",
     );
     tl.to(
-      '.symbol9',
+      ".symbol9",
       {
-        scale:'1',
-        
+        scale: "1",
       },
       "a8",
     );
     // --------------------------------
   }, []);
+
+
+  useEffect(()=>{
+    const LIT = gsap.timeline({
+       scrollTrigger: {
+        trigger: Card7.current,
+        start: "top 30%",
+        end: "top 30%",
+        toggleActions: "play none none reverse",
+      },
+    })
+     LIT.from(
+      ".llTimeline",
+      {
+        width: 0,
+        ease: "none",
+      },
+      "a6",
+    );
+  },[])
 
   // =====================================================================================================
   const flickerRefs = useRef([]);
@@ -728,33 +726,34 @@ const Proposal = () => {
         className="w-[70vw] h-[75vh] bg-[#f5f5f5] cardD p-10 gap-10 rounded-[10px] flex absolute top-[100%] left-1/2 -translate-x-1/2 "
       >
         {/* left */}
-        <div className="w-1/2 h-full bg-[#1A42C2]"></div>
+        <div className="w-1/2 h-full bg-[#1A42C2] overflow-hidden group">
+          <img
+            src={`/zerror.png`}
+            alt="Img"
+            className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
+          />
+        </div>
         {/* right */}
         <div className="w-1/2 h-full flex gap-10 text-[#1A42C2]">
           {/* left */}
-          <div className="w-1/2 h-full flex flex-col gap-10 text-justify">
+          <div className="w-1/2 h-full flex flex-col gap-5 text-justify capitalize">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-              facere porro nesciunt cupiditate illo perferendis id quam magni,
-              dolorum earum quaerat consequuntur perspiciatis repellat
-              laboriosam molestias similique, nam maiores sit.
+              We Exist To end the trade off. At zerror, design and technology
+              move as one - from first thought to final uild. every decision in
+              intentional. every detail measured. every release stable.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-              facere porro nesciunt cupiditate illo perferendis id quam magni.
+              To build zero-error digital products where design and technology
+              move as one.
             </p>
           </div>
           {/* Right */}
-          <div className="w-1/2 h-full flex flex-col gap-10 text-justify">
+          <div className="w-1/2 h-full flex flex-col gap-5 text-justify capitalize">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-              facere porro nesciunt cupiditate illo perferendis id quam magni,
-              dolorum earum quaerat consequuntur perspiciatis repellat
-              laboriosam molestias similique, nam maiores sit.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-              facere porro nesciunt cupiditate illo perferendis id quam magni.
+              We work wih startups studios and growing brands to design and bild
+              degital products that are clear, scalable and impactful. from
+              strategy to launch, we focus on thoughtful design, clean code, and
+              meaningful user experiences.
             </p>
           </div>
         </div>
@@ -771,7 +770,13 @@ const Proposal = () => {
         {/* Left */}
         <div className="w-[30%] h-full">
           {/* img */}
-          <div className=" w-full h-1/2 bg-white/50"></div>
+          <div className=" w-full h-1/2 bg-white/50 group overflow-hidden">
+            <img
+              src={`/zerror.png`}
+              alt="IMG"
+              className="w-full h-full object-center object-cover group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
+            />
+          </div>
           <div className="w-full h-1/2 text-white mt-5">
             Lorem ipsum dolor sit amet consectetur
           </div>
@@ -779,7 +784,13 @@ const Proposal = () => {
         {/* Right */}
         <div className="w-[70%] h-full flex flex-col">
           {/* img */}
-          <div className=" w-full h-1/2 bg-white/50"></div>
+          <div className=" w-full h-1/2 bg-white/50 group overflow-hidden">
+            <img
+              src={`/cir.png`}
+              alt="IMG"
+              className="w-full h-full object-center object-cover group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
+            />
+          </div>
           {/* text */}
           <div className=" w-full h-1/2 flex text-white gap-10">
             {/* left-T */}
@@ -812,50 +823,86 @@ const Proposal = () => {
         className="w-[70vw] h-[75vh] p-10 bg-[#f5f5f5] cardD text-[#1A42C2] rounded-[10px] absolute top-[100%] left-1/2 -translate-x-1/2 "
       >
         {/* 1 */}
-        <div className="w-full h-1/10 flex group justify-between items-center relative">
-          <p className="text-[1.5vw] leading-[3vw]">STUDIO</p>
+        <div className="w-full h-1/10 flex group justify-between items-center relative ">
+          <p className="text-[1.5vw] leading-[3vw]">Home</p>
           {/* Img */}
-          <div className="h-[70%] aspect-3/2 bg-[#1A42C2]"></div>
+          <div className="h-[70%] aspect-3/2 overflow-hidden ">
+            <img
+              src={`/1.jpg`}
+              alt="IMG"
+              className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
+            />
+          </div>
           {/* DIVLINER */}
           <div className=" absolute bottom-0 group-hover:w-full transition-all duration-200 ease-in left-0 w-0 h-[2px] bg-[#1A42C2] "></div>
         </div>
         {/* 2 */}
-        <div className="w-full group h-1/10 flex justify-between items-center relative">
-          <p className="text-[1.5vw] leading-[3vw]">AGENCY</p>
+        <div className="w-full group h-1/10 flex justify-between items-center relative ">
+          <p className="text-[1.5vw] leading-[3vw]">ABOUT</p>
           {/* Img */}
-          <div className="h-[70%] aspect-3/2 bg-[#1A42C2]"></div>
+          <div className="h-[70%] aspect-3/2 overflow-hidden ">
+            <img
+              src={`/2.jpg`}
+              alt="IMG"
+              className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
+            />
+          </div>
           {/* DIVLINER */}
           <div className=" absolute bottom-0 group-hover:w-full transition-all duration-200 ease-in left-0 w-0 h-[2px] bg-[#1A42C2] "></div>
         </div>
         {/* 3 */}
         <div className="w-full h-1/10 group flex justify-between items-center relative">
-          <p className="text-[1.5vw] leading-[3vw]">ABOUT</p>
+          <p className="text-[1.5vw] leading-[3vw]">OUR WORK</p>
           {/* Img */}
-          <div className="h-[70%] aspect-3/2 bg-[#1A42C2]"></div>
+          <div className="h-[70%] aspect-3/2 overflow-hidden">
+            <img
+              src={`/3.jpg`}
+              alt="IMG"
+              className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
+            />
+          </div>
           {/* DIVLINER */}
           <div className=" absolute bottom-0 group-hover:w-full transition-all duration-200 ease-in left-0 w-0 h-[2px] bg-[#1A42C2] "></div>
         </div>
         {/* 4 */}
         <div className="w-full h-1/10 flex group justify-between items-center relative">
-          <p className="text-[1.5vw] leading-[3vw]">CONTACT</p>
+          <p className="text-[1.5vw] leading-[3vw]">EXPERTISE</p>
           {/* Img */}
-          <div className="h-[70%] aspect-3/2 bg-[#1A42C2]"></div>
+          <div className="h-[70%] aspect-3/2 overflow-hidden ">
+            <img
+              src={`/4.jpg`}
+              alt="IMG"
+              className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
+            />
+          </div>
           {/* DIVLINER */}
           <div className=" absolute bottom-0 group-hover:w-full transition-all duration-200 ease-in left-0 w-0 h-[2px] bg-[#1A42C2] "></div>
         </div>
         {/* 5 */}
         <div className="w-full h-1/10 flex group justify-between items-center relative">
-          <p className="text-[1.5vw] leading-[3vw]">SERVICES</p>
+          <p className="text-[1.5vw] leading-[3vw]">CONTACT</p>
           {/* Img */}
-          <div className="h-[70%] aspect-3/2 bg-[#1A42C2]"></div>
+          <div className="h-[70%] aspect-3/2 overflow-hidden ">
+            <img
+              src={`/5.jpg`}
+              alt="IMG"
+              className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
+            />
+          </div>
           {/* DIVLINER */}
           <div className=" absolute bottom-0 group-hover:w-full transition-all duration-200 ease-in left-0 w-0 h-[2px] bg-[#1A42C2] "></div>
         </div>
         {/* 6 */}
         <div className="w-full h-1/10 flex group justify-between items-center relative">
-          <p className="text-[1.5vw] leading-[3vw]">PROJECTS</p>
+          <p className="text-[1.5vw] leading-[3vw]">OUR CLIENTS</p>
           {/* Img */}
-          <div className="h-[70%] aspect-3/2 bg-[#1A42C2]"></div>
+          <div className="h-[70%] aspect-3/2 overflow-hidden">
+            <img
+              src={`/1.jpg`}
+              alt="IMG"
+              className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
+            />
+          </div>
           {/* DIVLINER */}
           <div className=" absolute bottom-0 group-hover:w-full transition-all duration-200 ease-in left-0 w-0 h-[2px] bg-[#1A42C2] "></div>
         </div>
@@ -884,45 +931,78 @@ const Proposal = () => {
     );
   };
 
+  // const ProposalCard5 = () => {
+  //   return (
+  //     <div
+  //       ref={Card5}
+  //       className="w-[70vw] h-[75vh] p-10 bg-[#1A42C2] cardD rounded-[10px] absolute top-[100%] left-1/2 -translate-x-1/2 "
+  //     >
+  //       {/* IMG_CONT */}
+  //       <div className="w-full h-[70%] flex gap-10">
+  //         {/* 1=img */}
+  //         <div className="w-1/4 h-full flex flex-col">
+  //           <div className="w-full h-full bg-white/50"></div>
+  //           <p className="mt-2 text-white">Normal</p>
+  //           <p className=" text-white">Text Normal</p>
+  //         </div>
+
+  //         {/* 2=img */}
+  //         <div className="w-1/4 h-full flex flex-col">
+  //           <div className="w-full h-[70%] bg-white/50"></div>
+  //           <p className="mt-2 text-white">Normal</p>
+  //           <p className=" text-white">Text Normal</p>
+  //         </div>
+
+  //         {/* 3=img */}
+  //         <div className="w-1/4 h-full flex flex-col">
+  //           <div className="w-full h-full bg-white/50"></div>
+  //           <p className="mt-2 text-white">Normal</p>
+  //           <p className=" text-white">Text Normal</p>
+  //         </div>
+
+  //         {/* 4=img */}
+  //         <div className="w-1/4 h-full flex flex-col">
+  //           <div className="w-full h-[70%] bg-white/50"></div>
+  //           <p className="mt-2 text-white">Normal</p>
+  //           <p className=" text-white">Text Normal</p>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   );
+  // };
   const ProposalCard5 = () => {
+    const images = ["/p1.webp", "/p2.webp", "/p3.webp", "/p4.webp"];
     return (
       <div
         ref={Card5}
         className="w-[70vw] h-[75vh] p-10 bg-[#1A42C2] cardD rounded-[10px] absolute top-[100%] left-1/2 -translate-x-1/2 "
       >
-        {/* IMG_CONT */}
-        <div className="w-full h-[70%] flex gap-10">
-          {/* 1=img */}
-          <div className="w-1/4 h-full flex flex-col">
-            <div className="w-full h-full bg-white/50"></div>
-            <p className="mt-2 text-white">Normal</p>
-            <p className=" text-white">Text Normal</p>
-          </div>
+        <div className="w-full h-full overflow-hidden ">
+          <div className="flex gap-10 animate-scroll min-w-max">
+            {/* First Set */}
+            {images.map((item, index) => (
+              <Card key={`first-${index}`} img={item} />
+            ))}
 
-          {/* 2=img */}
-          <div className="w-1/4 h-full flex flex-col">
-            <div className="w-full h-[70%] bg-white/50"></div>
-            <p className="mt-2 text-white">Normal</p>
-            <p className=" text-white">Text Normal</p>
-          </div>
-
-          {/* 3=img */}
-          <div className="w-1/4 h-full flex flex-col">
-            <div className="w-full h-full bg-white/50"></div>
-            <p className="mt-2 text-white">Normal</p>
-            <p className=" text-white">Text Normal</p>
-          </div>
-
-          {/* 4=img */}
-          <div className="w-1/4 h-full flex flex-col">
-            <div className="w-full h-[70%] bg-white/50"></div>
-            <p className="mt-2 text-white">Normal</p>
-            <p className=" text-white">Text Normal</p>
+            {/* Second Set (duplicate) */}
+            {images.map((item, index) => (
+              <Card key={`second-${index}`} img={item} />
+            ))}
           </div>
         </div>
       </div>
     );
   };
+
+  const Card = ({ img }) => (
+    <div className=" aspect-[1/3] flex-shrink-0 flex flex-col group">
+      <div className="w-full h-[40vh] overflow-hidden">
+        <img src={img} alt="IMG" className="w-full h-full object-cover group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform" />
+      </div>
+      <p className="mt-2 text-white">Project</p>
+      <p className="text-white">Zerror Studios</p>
+    </div>
+  );
 
   const ProposalCard6 = () => {
     return (
@@ -944,7 +1024,9 @@ const Proposal = () => {
 
           {/* ImgCont */}
           <div className="w-full h-2/3">
-            <div className="w-full h-full bg-[#1A42C2]"></div>
+            <div className="w-full h-full bg-[#1A42C2] overflow-hidden group ">
+              <img src={`/1.jpg`} alt="IMG" className="w-full h-full object-center object-cover group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform" />
+            </div>
           </div>
         </div>
 
@@ -954,7 +1036,7 @@ const Proposal = () => {
           <div className="w-full h-1/4 flex ">
             {/* left */}
             <div className="w-1/2 h-full">
-              <p className="text-[1.3vw]">LISTEN</p>
+              <p className="text-[1.3vw]">PLANING</p>
             </div>
             {/* right */}
             <div className="w-1/2 h-full">
@@ -967,7 +1049,7 @@ const Proposal = () => {
           <div className="w-full h-1/4 flex ">
             {/* left */}
             <div className="w-1/2 h-full">
-              <p className="text-[1.3vw]">LISTEN</p>
+              <p className="text-[1.3vw]">DESIGN</p>
             </div>
             {/* right */}
             <div className="w-1/2 h-full">
@@ -980,7 +1062,7 @@ const Proposal = () => {
           <div className="w-full h-1/4 flex ">
             {/* left */}
             <div className="w-1/2 h-full">
-              <p className="text-[1.3vw]">LISTEN</p>
+              <p className="text-[1.3vw]">DEVELOPMENT</p>
             </div>
             {/* right */}
             <div className="w-1/2 h-full">
@@ -993,7 +1075,7 @@ const Proposal = () => {
           <div className="w-full h-1/4 flex ">
             {/* left */}
             <div className="w-1/2 h-full">
-              <p className="text-[1.3vw]">LISTEN</p>
+              <p className="text-[1.3vw]">TESTING</p>
             </div>
             {/* right */}
             <div className="w-1/2 h-full">
@@ -1002,7 +1084,6 @@ const Proposal = () => {
               </p>
             </div>
           </div>
-          
         </div>
       </div>
     );
@@ -1024,7 +1105,7 @@ const Proposal = () => {
           {/* Right */}
           <div className="w-1/2 h-full p-10 text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-            dolores voluptatem labore dicta. 
+            dolores voluptatem labore dicta.
           </div>
         </div>
 
@@ -1086,10 +1167,10 @@ const Proposal = () => {
         {/* Top Section */}
         <div className="flex justify-between items-start">
           {/* Left Title */}
-          <h1 className="text-[2.5vw] tracking-tight uppercase">Project</h1>
+          <h1 className="text-[2.5vw] tracking-tight uppercase">commercial</h1>
 
           {/* Right Title */}
-          <h1 className="text-[2.5vw] tracking-tight uppercase">Pricing</h1>
+          {/* <h1 className="text-[2.5vw] tracking-tight uppercase">Pricing</h1> */}
         </div>
 
         {/* Middle Section */}
@@ -1200,7 +1281,9 @@ const Proposal = () => {
           </div>
 
           {/* bottom */}
-          <div className="w-full h-1/2 bg-white/50"></div>
+          <div className="w-full h-1/2 overflow-hidden group">
+          <img src={`/zerror.png`} alt="IMG" className="w-full h-full object-center object-cover group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform" />
+          </div>
         </div>
       </div>
     );
@@ -1236,15 +1319,14 @@ const Proposal = () => {
     Last.to(".DIVH", {
       opacity: 1,
       ease: "power3.inOut",
-      pointerEvents:'auto'
+      pointerEvents: "auto",
     });
     Last.to(".innerCarder", {
-      
-      y:0,
-      stagger:{
-        opacity:0,
-        each:0.05,
-        ease:"power3.inOut",
+      y: 0,
+      stagger: {
+        opacity: 0,
+        each: 0.05,
+        ease: "power3.inOut",
       },
       opacity: 1,
       ease: "power3.inOut",
@@ -1273,29 +1355,30 @@ const Proposal = () => {
             return (
               <div
                 key={index}
-                className={` symbol${item} ${item == 1 && ('scale-[1]')} w-full scale-[0.7]  h-[2px] bg-white`}
+                className={` symbol${item} ${item == 1 && "scale-[1]"} w-full scale-[0.7]  h-[2px] bg-white`}
               ></div>
             );
           })}
         </div>
-
-        
       </div>
 
       {/* Div-Highlight */}
-        <div className=" fixed w-[70vw] h-[75vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 gap-5 grid grid-cols-3 grid-rows-3 z-100 pointer-events-none DIVH select-none opacity-0">
-          {CardImg.map((item, index) => {
-            return (
-              <div key={index} className="w-full h-full innerCarder flex -translate-y-50 opacity-0 group cursor-pointer">
-                <img
-                  src={item}
-                  className="w-full h-full object-cover object-center group-hover:opacity-70 transition-all duration-200 ease-in "
-                  alt="IMG"
-                />
-              </div>
-            );
-          })}
-        </div>
+      <div className=" fixed w-[70vw] h-[75vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 gap-5 grid grid-cols-3 grid-rows-3 z-100 pointer-events-none DIVH select-none opacity-0">
+        {CardImg.map((item, index) => {
+          return (
+            <div
+              key={index}
+              className="w-full h-full innerCarder flex -translate-y-50 opacity-0 group cursor-pointer"
+            >
+              <img
+                src={item}
+                className="w-full h-full object-cover object-center group-hover:opacity-70 transition-all duration-200 ease-in "
+                alt="IMG"
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
