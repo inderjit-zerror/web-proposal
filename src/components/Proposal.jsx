@@ -5,6 +5,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import { div } from "three/src/nodes/math/OperatorNode";
 gsap.registerPlugin(ScrollTrigger);
+import { MdArrowOutward } from "react-icons/md";
+import { useGSAP } from "@gsap/react";
 
 const tasks = [
   {
@@ -225,6 +227,9 @@ const Proposal = () => {
   const Card7 = useRef();
   const Card8 = useRef();
   const Card9 = useRef();
+  const Card10 = useRef();
+  const Card11 = useRef();
+  const Card12 = useRef();
 
   //   SCROLL CARD ANIMATE
   useEffect(() => {
@@ -454,6 +459,14 @@ const Proposal = () => {
       },
       "a6",
     );
+    tl.from(
+      ".llTimeline",
+      {
+        width: 0,
+        ease: "none",
+      },
+      "a6",
+    );
 
     tl.to(
       Card5.current,
@@ -560,26 +573,129 @@ const Proposal = () => {
       "a8",
     );
     // --------------------------------
-  }, []);
-
-  useEffect(() => {
-    const LIT = gsap.timeline({
-      scrollTrigger: {
-        trigger: Card7.current,
-        start: "top 30%",
-        // end: "top 30%",
-        toggleActions: "play none none reverse",
-      },
-    });
-    LIT.from(
-      ".llTimeline",
+    tl.to(
+      Card9.current,
       {
-        width: 0,
-        duration: 1,
+        top: "45%",
+        scale: 0.9,
         ease: "none",
       },
-      "a6",
+      "a9",
     );
+    tl.to(
+      Card10.current,
+      {
+        top: "50%",
+        translateY: "-50%",
+        ease: "none",
+      },
+      "a9",
+    );
+    tl.to(
+      Card8.current,
+      {
+        opacity: 0,
+        ease: "none",
+      },
+      "a9",
+    );
+    tl.to(
+      ".symbol9",
+      {
+        scale: "0.7",
+      },
+      "a9",
+    );
+    tl.to(
+      ".symbol10",
+      {
+        scale: "1",
+      },
+      "a9",
+    );
+    // --------------------------------
+    tl.to(
+      Card10.current,
+      {
+        top: "45%",
+        scale: 0.9,
+        ease: "none",
+      },
+      "a10",
+    );
+    tl.to(
+      Card11.current,
+      {
+        top: "50%",
+        translateY: "-50%",
+        ease: "none",
+      },
+      "a10",
+    );
+    tl.to(
+      Card9.current,
+      {
+        opacity: 0,
+        ease: "none",
+      },
+      "a10",
+    );
+    tl.to(
+      ".symbol10",
+      {
+        scale: "0.7",
+      },
+      "a10",
+    );
+    tl.to(
+      ".symbol11",
+      {
+        scale: "1",
+      },
+      "a10",
+    );
+    // --------------------------------
+        tl.to(
+      Card11.current,
+      {
+        top: "45%",
+        scale: 0.9,
+        ease: "none",
+      },
+      "a11",
+    );
+    tl.to(
+      Card12.current,
+      {
+        top: "50%",
+        translateY: "-50%",
+        ease: "none",
+      },
+      "a11",
+    );
+    tl.to(
+      Card10.current,
+      {
+        opacity: 0,
+        ease: "none",
+      },
+      "a11",
+    );
+    tl.to(
+      ".symbol11",
+      {
+        scale: "0.7",
+      },
+      "a11",
+    );
+    tl.to(
+      ".symbol12",
+      {
+        scale: "1",
+      },
+      "a11",
+    );
+    // --------------------------------
   }, []);
 
   // =====================================================================================================
@@ -764,9 +880,9 @@ const Proposal = () => {
               <p>Projects</p>
             </div>
             {/* 4 */}
-            <div className="w-full h-full border-b-[1px] border-r-[1px] select-none cursor-pointer border-l-[1px] border-t-[1px] transition-all duration-500 ease-in text-[#f5f5f5] border-[#1a41c22a]  flex flex-col items-end text-[1vw] text-end leading-[1vw] p-5 bg-[#1a41c2]">
-              <p className=" mb-1">ZERROR</p>
-              <p className=" mb-1">STUDIOS</p>
+            <div className="w-full h-full border-b-[1px] border-r-[1px] select-none cursor-pointer border-l-[1px] border-t-[1px] transition-all duration-500 ease-in text-[#4567d6] border-[#1a41c22a]  flex flex-col items-end text-[1vw] text-end leading-[1vw] p-5 hover:bg-[#4567d6] hover:text-[#f5f5f5]">
+              <p className="font-bold mb-1">99%</p>
+              <p>Efficent</p>
             </div>
           </div>
         </div>
@@ -780,13 +896,12 @@ const Proposal = () => {
         ref={Card3}
         className="w-[70vw] h-[75vh] overflow-hidden cardD bg-[#1A42C2] gap-10 p-10 rounded-[10px] flex absolute top-[100%] left-1/2 -translate-x-1/2 "
       >
-        
         {/* Right */}
         <div className="w-full h-full flex flex-col">
           {/* img */}
           <div className=" w-full h-2/3 bg-white/50 group overflow-hidden">
             <img
-              src={`/clientmeet.jpg`}
+              src={`/abstrac1.jpg`}
               alt="IMG"
               className="w-full h-full object-center object-cover group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
             />
@@ -820,106 +935,68 @@ const Proposal = () => {
     return (
       <div
         ref={Card4}
-        className="w-[70vw] h-[75vh] p-10 bg-[#f5f5f5] cardD text-[#1A42C2] rounded-[10px] absolute top-[100%] left-1/2 -translate-x-1/2 "
+        className="w-[70vw] h-[75vh] p-10 bg-[#f5f5f5] gap-5 flex cardD text-[#1A42C2] rounded-[10px] absolute top-[100%] left-1/2 -translate-x-1/2 "
       >
-        {/* 1 */}
-        <div className="w-full h-1/10 flex group justify-between items-center relative ">
-          <p className="text-[1.5vw] leading-[3vw]">Home</p>
-          {/* Img */}
-          <div className="h-[70%] aspect-3/2 overflow-hidden ">
+        {/* left */}
+        <div className="w-1/3 h-full flex flex-col">
+          {/* img */}
+          <div className="w-full h-1/3 bg-[#1A42C2] overflow-hidden">
             <img
-              src={`/1.jpg`}
+              src={`/hipe.jpg`}
               alt="IMG"
-              className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
+              className=" w-full h-full object-center object-cover"
             />
           </div>
-          {/* DIVLINER */}
-          <div className=" absolute bottom-0 group-hover:w-full transition-all duration-200 ease-in left-0 w-0 h-[2px] bg-[#1A42C2] "></div>
-        </div>
-        {/* 2 */}
-        <div className="w-full group h-1/10 flex justify-between items-center relative ">
-          <p className="text-[1.5vw] leading-[3vw]">ABOUT</p>
-          {/* Img */}
-          <div className="h-[70%] aspect-3/2 overflow-hidden ">
-            <img
-              src={`/2.jpg`}
-              alt="IMG"
-              className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
-            />
-          </div>
-          {/* DIVLINER */}
-          <div className=" absolute bottom-0 group-hover:w-full transition-all duration-200 ease-in left-0 w-0 h-[2px] bg-[#1A42C2] "></div>
-        </div>
-        {/* 3 */}
-        <div className="w-full h-1/10 group flex justify-between items-center relative">
-          <p className="text-[1.5vw] leading-[3vw]">OUR WORK</p>
-          {/* Img */}
-          <div className="h-[70%] aspect-3/2 overflow-hidden">
-            <img
-              src={`/3.jpg`}
-              alt="IMG"
-              className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
-            />
-          </div>
-          {/* DIVLINER */}
-          <div className=" absolute bottom-0 group-hover:w-full transition-all duration-200 ease-in left-0 w-0 h-[2px] bg-[#1A42C2] "></div>
-        </div>
-        {/* 4 */}
-        <div className="w-full h-1/10 flex group justify-between items-center relative">
-          <p className="text-[1.5vw] leading-[3vw]">EXPERTISE</p>
-          {/* Img */}
-          <div className="h-[70%] aspect-3/2 overflow-hidden ">
-            <img
-              src={`/4.jpg`}
-              alt="IMG"
-              className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
-            />
-          </div>
-          {/* DIVLINER */}
-          <div className=" absolute bottom-0 group-hover:w-full transition-all duration-200 ease-in left-0 w-0 h-[2px] bg-[#1A42C2] "></div>
-        </div>
-        {/* 5 */}
-        <div className="w-full h-1/10 flex group justify-between items-center relative">
-          <p className="text-[1.5vw] leading-[3vw]">CONTACT</p>
-          {/* Img */}
-          <div className="h-[70%] aspect-3/2 overflow-hidden ">
-            <img
-              src={`/5.jpg`}
-              alt="IMG"
-              className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
-            />
-          </div>
-          {/* DIVLINER */}
-          <div className=" absolute bottom-0 group-hover:w-full transition-all duration-200 ease-in left-0 w-0 h-[2px] bg-[#1A42C2] "></div>
-        </div>
-        {/* 6 */}
-        <div className="w-full h-1/10 flex group justify-between items-center relative">
-          <p className="text-[1.5vw] leading-[3vw]">OUR CLIENTS</p>
-          {/* Img */}
-          <div className="h-[70%] aspect-3/2 overflow-hidden">
-            <img
-              src={`/1.jpg`}
-              alt="IMG"
-              className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
-            />
-          </div>
-          {/* DIVLINER */}
-          <div className=" absolute bottom-0 group-hover:w-full transition-all duration-200 ease-in left-0 w-0 h-[2px] bg-[#1A42C2] "></div>
-        </div>
+          {/* Detail */}
+          <div className="w-full h-fit flex justify-between mt-1">
+            {/* left */}
+            <div className="w-fit h-fit">
+              <p>Zerror Studios</p>
+            </div>
 
-        {/* 7 */}
-        <div className="w-full h-4/10  flex justify-end items-end">
-          {/* left */}
-          <div className="w-1/2 h-fit">Zerror Studios</div>
-          {/* right */}
-          <div className="w-1/2 h-fit flex justify-end items-end gap-10">          
             {/* Right */}
-            <div className="w-fit h-fit flex gap-10">
-              <p>Email</p>
-              <p>WhatsApp</p>
-              <p>Form</p>
+            <div className="w-fit h-fit flex flex-col text-[14px] leading-[15px] justify-end items-end">
+              <p>Visual Designs</p>
+              <p>Ui/UX Design</p>
+              <p>Development</p>
             </div>
           </div>
+
+          {/* bottom */}
+          <div className="w-full h-fit  mt-auto text-[14px] leading-[15px]">
+            <p>Creative, Efficiency</p>
+            <p>Entertainment, Empathy</p>
+          </div>
+        </div>
+
+        {/* Right */}
+        <div className="w-2/3 h-full p-5  ">
+          {/* 1 */}
+          {["WORK", "SERVICE", "ABOUT", "PRICING", "CONTACT"].map(
+            (item, index) => {
+              return (
+                <div key={index} className="w-full h-1/5 group ">
+                  <div className="w-full h-full overflow-hidden flex items-center transition-all duration-200 ease-in select-none cursor-pointer  group-hover:bg-[#1A42C2] group-hover:text-white px-10 ">
+                    {/* text */}
+                    <div className="w-fit h-fit flex gap-2">
+                      <div className="w-fit h-[3.5vw] text-[3.5vw] leading-[3.5vw]  overflow-hidden">
+                        <p className=" transition-all duration-200 ease-in  group-hover:-translate-y-[3.5vw]">
+                          {item}
+                        </p>
+                        <p className=" transition-all duration-200 ease-in group-hover:-translate-y-[3.5vw]">
+                          {item}
+                        </p>
+                      </div>
+                      {/* arrow */}
+                      <div className="w-fit h-full flex justify-end items-end ">
+                        <MdArrowOutward />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            },
+          )}
         </div>
       </div>
     );
@@ -930,38 +1007,91 @@ const Proposal = () => {
     return (
       <div
         ref={Card5}
-        className="w-[70vw] h-[75vh] p-10 bg-[#1A42C2] cardD rounded-[10px] absolute top-[100%] left-1/2 -translate-x-1/2 "
+        className="w-[70vw] h-[75vh] p-10 bg-[#1A42C2] cardD rounded-[10px] flex justify-between absolute top-[100%] left-1/2 -translate-x-1/2 "
       >
-        <div className="w-full h-full overflow-hidden ">
-          <div className="flex gap-10 animate-scroll min-w-max">
-            {/* First Set */}
-            {images.map((item, index) => (
-              <Card key={`first-${index}`} img={item} />
-            ))}
+        {/* Left */}
+        <div className="w-[300px] h-full overflow-hidden  group ">
+          {/* 1left */}
+          <div className="flex  min-h-max w-fit flex-col text-[14px] text-white  animate-scroll  ">
+            {/* animate-scroll */}
+            {images.map((item, index) => {
+              return (
+                <div key={index} className="w-full aspect-square  ">
+                  <div className="w-full aspect-square overflow-hidden ">
+                    <img
+                      src={item}
+                      alt="img"
+                      className="w-full   h-full object-center object-cover py-2"
+                    />
+                  </div>
+                  <div className="w-full h-fit flex justify-between items-center">
+                    <p>PROJECT</p>
+                    <p>{index + 1}</p>
+                  </div>
+                </div>
+              );
+            })}
+            {images.map((item, index) => {
+              return (
+                <div key={index} className="w-full   overflow-hidden  ">
+                  <div className="w-full aspect-square overflow-hidden ">
+                    <img
+                      src={item}
+                      alt="img"
+                      className="w-full   h-full object-center object-cover py-2"
+                    />
+                  </div>
+                  <div className="w-full h-fit flex justify-between items-center">
+                    <p>PROJECT</p>
+                    <p>{index + 1}</p>
+                  </div>
+                </div>
+              );
+            })}
+            /
+          </div>
+        </div>
 
-            {/* Second Set (duplicate) */}
-            {images.map((item, index) => (
-              <Card key={`second-${index}`} img={item} />
-            ))}
+        {/* Right */}
+        <div className="w-[calc(100%-350px)] h-full flex flex-col text-white justify-between">
+          <p className=" uppercase text-[3.5vw] leading-[3.5vw] flex  justify-start items-start gap-2">
+            Reffrence <MdArrowOutward className="text-[20px]" />
+          </p>
+
+          {/* Inside  */}
+          <div className="w-full h-[calc(100%-100px)]  grid grid-cols-2 grid-rows-2 gap-5">
+            <div className="w-full h-full">
+              <p className=" capitalize text-[14px] leading-[14px ] text-justify flex justify-end items-end ">
+                consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </p>
+            </div>
+            <div className="w-full h-full overflow-hidden">
+              <img
+                src={`/hipe.jpg`}
+                alt="ig"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+            <div className="w-full h-full"></div>
+            <div className="w-full h-full">
+              <p className="  text-[14px] leading-[14px ] text-justify flex justify-end items-end capitalize">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     );
   };
-
-  const Card = ({ img }) => (
-    <div className=" aspect-[1/3] flex-shrink-0 flex flex-col group">
-      <div className="w-full h-[40vh] overflow-hidden">
-        <img
-          src={img}
-          alt="IMG"
-          className="w-full h-full object-cover group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
-        />
-      </div>
-      <p className="mt-2 text-white">Project</p>
-      <p className="text-white">Zerror Studios</p>
-    </div>
-  );
 
   const ProposalCard6 = () => {
     return (
@@ -985,7 +1115,7 @@ const Proposal = () => {
           <div className="w-full h-2/3">
             <div className="w-full h-full bg-[#1A42C2] overflow-hidden group ">
               <img
-                src={`/1.jpg`}
+                src={`/work.jpg`}
                 alt="IMG"
                 className="w-full h-full object-center object-cover group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
               />
@@ -996,57 +1126,31 @@ const Proposal = () => {
         {/* Right */}
         <div className="w-[50%] h-full py-5 flex flex-col text-[#1A42C2] ">
           {/* 1 */}
-          <div className="w-full h-1/4 flex ">
-            {/* left */}
-            <div className="w-1/2 h-full">
-              <p className="text-[1.3vw]">PLANING</p>
-            </div>
-            {/* right */}
-            <div className="w-1/2 h-full">
-              <p className="w-[90%]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          {/* 2 */}
-          <div className="w-full h-1/4 flex ">
-            {/* left */}
-            <div className="w-1/2 h-full">
-              <p className="text-[1.3vw]">DESIGN</p>
-            </div>
-            {/* right */}
-            <div className="w-1/2 h-full">
-              <p className="w-[90%]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          {/* 3 */}
-          <div className="w-full h-1/4 flex ">
-            {/* left */}
-            <div className="w-1/2 h-full">
-              <p className="text-[1.3vw]">DEVELOPMENT</p>
-            </div>
-            {/* right */}
-            <div className="w-1/2 h-full">
-              <p className="w-[90%]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          {/* 4 */}
-          <div className="w-full h-1/4 flex ">
-            {/* left */}
-            <div className="w-1/2 h-full">
-              <p className="text-[1.3vw]">TESTING</p>
-            </div>
-            {/* right */}
-            <div className="w-1/2 h-full">
-              <p className="w-[90%]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
+           {["PLANING", "DESIGN", "DEVELOPMENT", "TESTING", "DELIVER"].map(
+            (item, index) => {
+              return (
+                <div key={index} className="w-full h-1/4 group ">
+                  <div className="w-full h-full overflow-hidden flex items-center transition-all duration-200 ease-in select-none cursor-pointer  group-hover:bg-[#1A42C2] group-hover:text-white px-10 ">
+                    {/* text */}
+                    <div className="w-fit h-fit flex gap-2">
+                      <div className="w-fit h-[3.5vw] text-[3.5vw] leading-[3.5vw]  overflow-hidden">
+                        <p className=" transition-all duration-200 ease-in  group-hover:-translate-y-[3.5vw]">
+                          {item}
+                        </p>
+                        <p className=" transition-all duration-200 ease-in group-hover:-translate-y-[3.5vw]">
+                          {item}
+                        </p>
+                      </div>
+                      {/* arrow */}
+                      <div className="w-fit h-full flex justify-end items-end ">
+                        <MdArrowOutward />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            },
+          )}
         </div>
       </div>
     );
@@ -1139,8 +1243,13 @@ const Proposal = () => {
         {/* Middle Section */}
         <div className="mt-12 h-[80%] flex flex-col justify-end ">
           <div className="flex justify-between mb-4 text-lg">
-            <span>Copywriting</span>
-            <span>₹ 20000.00</span>
+            <span className="font-bold underline">DISCRIPTION</span>
+            <span className="font-bold underline">PRICING</span>
+          </div>
+
+          <div className="flex justify-between mb-4 text-lg">
+            <span >Copywriting</span>
+            <span >₹ 20000.00</span>
           </div>
 
           <div className="flex justify-between mb-4 text-lg">
@@ -1246,12 +1355,42 @@ const Proposal = () => {
           {/* bottom */}
           <div className="w-full h-1/2 overflow-hidden group">
             <img
-              src={`/zerror.png`}
+              src={`/last.jpg`}
               alt="IMG"
               className="w-full h-full object-center object-cover group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
             />
           </div>
         </div>
+      </div>
+    );
+  };
+  const ProposalCard10 = () => {
+    return (
+      <div
+        ref={Card10}
+        className="w-[70vw] h-[75vh] bg-[white] cardD rounded-[10px] flex p-10 absolute top-[100%] text-white left-1/2 -translate-x-1/2 "
+      >
+
+      </div>
+    );
+  };
+  const ProposalCard11 = () => {
+    return (
+      <div
+        ref={Card11}
+        className="w-[70vw] h-[75vh] bg-[#1A42C2] cardD rounded-[10px] flex p-10 absolute top-[100%] text-white left-1/2 -translate-x-1/2 "
+      >
+
+      </div>
+    );
+  };
+  const ProposalCard12 = () => {
+    return (
+      <div
+        ref={Card12}
+        className="w-[70vw] h-[75vh] bg-[white] cardD rounded-[10px] flex p-10 absolute top-[100%] text-white left-1/2 -translate-x-1/2 "
+      >
+
       </div>
     );
   };
@@ -1301,10 +1440,10 @@ const Proposal = () => {
   }, []);
 
   return (
-    <div ref={mainCont} className="w-full h-[800vh] relative bg-[#1e1e1e]">
+    <div ref={mainCont} className="w-full h-[800vh] relative ">
       <div
         ref={stickyCont}
-        className="w-full h-screen sticky top-0 left-0 bg-[#1e1e1e]"
+        className="w-full h-screen sticky top-0 left-0 "
       >
         <ProposalCard1 />
         <ProposalCard2 />
@@ -1315,10 +1454,13 @@ const Proposal = () => {
         <ProposalCard7 />
         <ProposalCard8 />
         <ProposalCard9 />
+        <ProposalCard10 />
+        <ProposalCard11 />
+        <ProposalCard12 />
 
         {/* Liner */}
         <div className="w-[30px] h-[100px] absolute top-1/2 right-[5%]  flex flex-col justify-between">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, index) => {
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12].map((item, index) => {
             return (
               <div
                 key={index}

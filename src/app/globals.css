@@ -27,13 +27,21 @@ body {
 
 @keyframes infiniteScroll {
   0% {
-    transform: translateX(0);
+    transform: translateY(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateY(-50%);
   }
 }
 
 .animate-scroll {
   animation: infiniteScroll 20s linear infinite;
+}
+
+/* .animate-scroll:hover {
+  animation-play-state: paused;
+} */
+
+.group:hover .animate-scroll {
+  animation-play-state: paused;
 }
