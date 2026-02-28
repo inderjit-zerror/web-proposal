@@ -655,7 +655,7 @@ const Proposal = () => {
       "a10",
     );
     // --------------------------------
-        tl.to(
+    tl.to(
       Card11.current,
       {
         top: "45%",
@@ -1126,7 +1126,7 @@ const Proposal = () => {
         {/* Right */}
         <div className="w-[50%] h-full py-5 flex flex-col text-[#1A42C2] ">
           {/* 1 */}
-           {["PLANING", "DESIGN", "DEVELOPMENT", "TESTING", "DELIVER"].map(
+          {["PLANING", "DESIGN", "DEVELOPMENT", "TESTING", "DELIVER"].map(
             (item, index) => {
               return (
                 <div key={index} className="w-full h-1/4 group ">
@@ -1248,8 +1248,8 @@ const Proposal = () => {
           </div>
 
           <div className="flex justify-between mb-4 text-lg">
-            <span >Copywriting</span>
-            <span >₹ 20000.00</span>
+            <span>Copywriting</span>
+            <span>₹ 20000.00</span>
           </div>
 
           <div className="flex justify-between mb-4 text-lg">
@@ -1368,9 +1368,44 @@ const Proposal = () => {
     return (
       <div
         ref={Card10}
-        className="w-[70vw] h-[75vh] bg-[white] cardD rounded-[10px] flex p-10 absolute top-[100%] text-white left-1/2 -translate-x-1/2 "
+        className="w-[70vw] h-[75vh] bg-[white] cardD rounded-[10px] gap-5 flex p-10 absolute top-[100%] text-[#1A42C2] left-1/2 -translate-x-1/2 "
       >
+        {/* Left */}
+        <div className="w-1/2 h-full flex flex-col">
+          <div className="w-full h-fit text-[2vw] leading-[2vw] tracking-tighter">
+            <span className="font-bold">CASE STUDY 1 : </span> RPSG MEDIA
+          </div>
 
+          {/* img */}
+          <div className="w-full h-[90%] mt-auto overflow-hidden group">
+            <img src={`/CC1.jpg`} alt="img" className="w-full h-full object-cover object-center transition-all duration-200 ease-in group-hover:scale-[1.015]" />
+          </div>
+        </div>
+
+        {/* Right */}
+        <div className="w-1/2 h-full flex flex-col">
+          <p className="text-[2.5vw] leading-[2.5vw] uppercase ">Custom CMS + Websites for Premium Publishing Brands</p>
+          <p className="text-[16px] leading-[16px] text-justify mt-4">
+            RPSG Media needed enterprise-grade digital platforms for The
+            Hollywood Reporter India, Esquire India, and Robb Report India that
+            matched global brand standards. Off-the-shelf WordPress templates
+            couldn’t support their scale, prestige, or different editorial
+            needs.
+          </p>
+          <p className="text-[16px] leading-[16px] text-justify mt-1">
+            We built a fully custom CMS with a unified backend and
+            brand-specific frontends tailored to each publication’s identity and
+            workflow. The system supports breaking news, feature publishing, and
+            luxury curation — simple enough for 100+ editors to use without
+            training.
+          </p>
+
+          <div className="text-[16px] leading-[16px] text-justify mt-2 mt-auto">
+            <span className="font-bold mb-2">Outcome:</span> <br></br> <p className="mt-2"> Within 12 months, all three publications ranked among the
+            top in their categories, serving 3M+ monthly users. The
+            infrastructure now powers editorial excellence at scale.</p>
+          </div>
+        </div>
       </div>
     );
   };
@@ -1378,9 +1413,35 @@ const Proposal = () => {
     return (
       <div
         ref={Card11}
-        className="w-[70vw] h-[75vh] bg-[#1A42C2] cardD rounded-[10px] flex p-10 absolute top-[100%] text-white left-1/2 -translate-x-1/2 "
+        className="w-[70vw] h-[75vh] bg-[#1A42C2] cardD rounded-[10px] gap-5 flex p-10 absolute top-[100%] text-white left-1/2 -translate-x-1/2 "
       >
 
+         {/* Left */}
+        <div className="w-1/2 h-full flex flex-col">
+          <div className="w-full h-fit text-[2vw] leading-[2vw] tracking-tighter">
+            <span className="font-bold">CASE STUDY 2 : </span> MANIFEST
+          </div>
+
+          {/* img */}
+          <div className="w-full h-[90%] mt-auto overflow-hidden group">
+            <img src={`/CC2.jpg`} alt="img" className="w-full h-full object-cover object-center transition-all duration-200 ease-in group-hover:scale-[1.015]" />
+          </div>
+        </div>
+
+        {/* Right */}
+        <div className="w-1/2 h-full flex flex-col">
+         <p className="text-[2.5vw] leading-[2.5vw] uppercase ">WordPress to Custom Platform Migration</p>
+          <p className="text-[16px] leading-[16px] text-justify mt-4">
+           Manifest, a wedding & lifestyle magazine, had five years of WordPress content and strong SEO authority but hit a growth ceiling. They needed a full migration to a custom platform — without losing data, breaking URLs, or affecting traffic.
+          </p>
+          <p className="text-[16px] leading-[16px] text-justify mt-1">
+           We built custom middleware to automate the migration of hundreds of articles, thousands of images, and all metadata in a single operation. Every URL was preserved with proper 301 redirects, and deployment happened overnight with zero downtime.
+          </p>
+
+          <div className="text-[16px] leading-[16px] text-justify mt-2 mt-auto">
+            <span className="font-bold mb-2">Outcome:</span> <br></br> <p className="mt-2"> Traffic grew by 200%. There was zero data loss, zero broken links, and page speed improved by 60%. The brand retained its full institutional value while unlocking new editorial capabilities.</p>
+          </div>
+        </div>
       </div>
     );
   };
@@ -1388,9 +1449,32 @@ const Proposal = () => {
     return (
       <div
         ref={Card12}
-        className="w-[70vw] h-[75vh] bg-[white] cardD rounded-[10px] flex p-10 absolute top-[100%] text-white left-1/2 -translate-x-1/2 "
+        className="w-[70vw] h-[75vh] bg-[white] cardD rounded-[10px] gap-5 flex p-10 absolute top-[100%] text-[#1A42C2] left-1/2 -translate-x-1/2 "
       >
+         {/* Left */}
+        <div className="w-1/2 h-full flex flex-col">
+          <div className="w-full h-fit text-[2vw] leading-[2vw] tracking-tighter">
+            <span className="font-bold">CASE STUDY 3 : </span> SALMAN KHAN FILMS
+          </div>
 
+          {/* img */}
+          <div className="w-full h-[90%] mt-auto overflow-hidden group">
+            <img src={`/CC3.jpg`} alt="img" className="w-full h-full object-cover object-center transition-all duration-200 ease-in group-hover:scale-[1.015]" />
+          </div>
+        </div>
+
+        {/* Right */}
+        <div className="w-1/2 h-full flex flex-col">
+        <p className="text-[2.5vw] leading-[2.5vw] uppercase ">Custom Showcase Website for a Leading Production House</p>
+          <p className="text-[16px] leading-[16px] text-justify mt-4">
+           Salman Khan Films required a website that reflected its prestige and creative authority — one that would feel modern not just today, but years into the future.</p>
+          <p className="text-[16px] leading-[16px] text-justify mt-1">
+           We designed a fully custom website rooted in filmmaking language: intentional animations, elegant whitespace, strong typography, and smooth transitions. The focus was sophistication through restraint, not trend-driven visuals.</p>
+
+          <div className="text-[16px] leading-[16px] text-justify mt-2 mt-auto">
+            <span className="font-bold mb-2">Outcome:</span> <br></br> <p className="mt-2"> Since launch, multiple major releases have occurred, yet the site hasn’t required redesign or felt outdated. The architecture has remained contemporary across film cycles — proving that thoughtful design sustains relevance.</p>
+          </div>
+        </div>
       </div>
     );
   };
@@ -1407,6 +1491,9 @@ const Proposal = () => {
     `/SS7.png`,
     `/SS8.png`,
     `/SS9.png`,
+    `/SS10.png`,
+    `/SS11.png`,
+    `/SS12.png`,
   ];
 
   useEffect(() => {
@@ -1441,10 +1528,7 @@ const Proposal = () => {
 
   return (
     <div ref={mainCont} className="w-full h-[800vh] relative ">
-      <div
-        ref={stickyCont}
-        className="w-full h-screen sticky top-0 left-0 "
-      >
+      <div ref={stickyCont} className="w-full h-screen sticky top-0 left-0 ">
         <ProposalCard1 />
         <ProposalCard2 />
         <ProposalCard3 />
@@ -1460,7 +1544,7 @@ const Proposal = () => {
 
         {/* Liner */}
         <div className="w-[30px] h-[100px] absolute top-1/2 right-[5%]  flex flex-col justify-between">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12].map((item, index) => {
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item, index) => {
             return (
               <div
                 key={index}
@@ -1472,7 +1556,7 @@ const Proposal = () => {
       </div>
 
       {/* Div-Highlight */}
-      <div className=" fixed w-[70vw] h-[75vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 gap-5 grid grid-cols-3 grid-rows-3 z-100 pointer-events-none DIVH select-none opacity-0">
+      <div className=" fixed w-[80vw] h-[75vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 gap-5 grid grid-cols-4 grid-rows-3 z-100 pointer-events-none DIVH select-none opacity-0">
         {CardImg.map((item, index) => {
           return (
             <div
