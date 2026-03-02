@@ -7,6 +7,7 @@ import { div } from "three/src/nodes/math/OperatorNode";
 gsap.registerPlugin(ScrollTrigger);
 import { MdArrowOutward } from "react-icons/md";
 import { useGSAP } from "@gsap/react";
+import Image from "next/image";
 
 const tasks = [
   {
@@ -1097,60 +1098,59 @@ const Proposal = () => {
     return (
       <div
         ref={Card6}
-        className="w-[70vw] h-[75vh] p-10 flex justify-between cardD bg-[#f5f5f5] rounded-[10px] absolute top-[100%] left-1/2 -translate-x-1/2 "
+        className="w-[70vw] h-[75vh] p-10 flex justify-between cardD bg-[#f5f5f5] text-[#1A42C2] rounded-[10px] absolute top-[100%] left-1/2 -translate-x-1/2 "
       >
-        {/* Left */}
-        <div className="w-[30%] h-full flex flex-col text-[#1A42C2]">
-          <div className="w-full h-1/3">
-            <p className="text-[2.5vw]">PROCESS</p>
-          </div>
-          <div className="w-full h-1/3 flex justify-start items-center pr-5">
-            <p className="">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              natus, neque officia pariatur.
+
+        {/* LEFT SIDE */}
+        <div className="w-1/2  flex flex-col  justify-between">
+          {/* Title */}
+          <div>
+            <h2 className="text-5xl font-light tracking-wide mb-8">PROCESS</h2>
+
+            <p className="text-sm leading-relaxed max-w-md opacity-80">
+              WE LIKE TO START BY UNDERSTANDING YOUR MARKET, YOUR CUSTOMERS, AND
+              YOUR BRAND. GETTING TO KNOW.
             </p>
           </div>
 
-          {/* ImgCont */}
-          <div className="w-full h-2/3">
-            <div className="w-full h-full bg-[#1A42C2] overflow-hidden group ">
-              <img
-                src={`/work.jpg`}
-                alt="IMG"
-                className="w-full h-full object-center object-cover group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
-              />
-            </div>
+          {/* Bottom Image */}
+          <div className="w-1/2 aspect-square relative bg-amber-300 overflow-hidden">
+            <img
+              src={`/work.jpg`} // replace with your image
+              alt="img"
+              className="object-cover object-center w-full h-full rounded-md"
+            />
           </div>
         </div>
 
-        {/* Right */}
-        <div className="w-[50%] h-full py-5 flex flex-col text-[#1A42C2] ">
-          {/* 1 */}
-          {["PLANING", "DESIGN", "DEVELOPMENT", "TESTING", "DELIVER"].map(
-            (item, index) => {
-              return (
-                <div key={index} className="w-full h-1/4 group ">
-                  <div className="w-full h-full overflow-hidden flex items-center transition-all duration-200 ease-in select-none cursor-pointer  group-hover:bg-[#1A42C2] group-hover:text-white px-10 ">
-                    {/* text */}
-                    <div className="w-fit h-fit flex gap-2">
-                      <div className="w-fit h-[3.5vw] text-[3.5vw] leading-[3.5vw]  overflow-hidden">
-                        <p className=" transition-all duration-200 ease-in  group-hover:-translate-y-[3.5vw]">
-                          {item}
-                        </p>
-                        <p className=" transition-all duration-200 ease-in group-hover:-translate-y-[3.5vw]">
-                          {item}
-                        </p>
-                      </div>
-                      {/* arrow */}
-                      <div className="w-fit h-full flex justify-end items-end ">
-                        <MdArrowOutward />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            },
-          )}
+        {/* Divider Line */}
+        <div className="w-px bg-white/20" />
+
+        {/* RIGHT SIDE */}
+        <div className="w-1/2 p-10 flex flex-col justify-between">
+          {[
+            { number: "1", title: "LISTEN" },
+            { number: "2", title: "RESEARCH" },
+            { number: "3", title: "CREATE" },
+            { number: "4", title: "LAUNCH" },
+           
+          ].map((item) => (
+            <div
+              key={item.number}
+              className="flex items-start gap-6 border-b border-white/10 pb-4"
+            >
+              <span className="text-xs opacity-50 w-6">{item.number}</span>
+
+              <div>
+                <h3 className="text-[1.5vw] tracking-wide">{item.title}</h3>
+
+                <p className="text-xs opacity-60 max-w-sm mt-2 leading-relaxed">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elementum.
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     );
@@ -1295,7 +1295,175 @@ const Proposal = () => {
     return (
       <div
         ref={Card9}
-        className="w-[70vw] h-[75vh] bg-[#1A42C2] cardD rounded-[10px] flex p-10 absolute top-[100%] text-white left-1/2 -translate-x-1/2 "
+        className="w-[70vw] h-[75vh] bg-[#1A42C2] cardD rounded-[10px] flex  absolute top-[100%] text-white left-1/2 -translate-x-1/2 "
+      >
+        {/* Left */}
+        <div className="w-1/2 h-full flex flex-col">
+          {/* img */}
+          <div className="w-full  h-full mt-auto overflow-hidden group">
+            <img
+              src={`/CC3.jpg`}
+              alt="img"
+              className="w-full h-full object-cover object-center transition-all duration-200 ease-in group-hover:scale-[1.015]"
+            />
+          </div>
+        </div>
+
+        {/* Right */}
+        <div className="w-1/2 h-full flex flex-col py-10 px-5">
+          <span className="font-bold text-[16px] leading-[16px] uppercase">
+            CASE STUDY 1 :
+          </span>
+          <p className="text-[1.8vw] leading-[1.8vw] uppercase  flex mt-2 ">
+            {" "}
+            SALMAN KHAN FILMS
+          </p>
+          <p className="text-[1.5vw] leading-[1.5vw] capitalize mt-4 ">
+            Custom Showcase Website for a Leading Production House
+          </p>
+          <p className="text-[16px] leading-[16px] text-justify flex mt-6">
+            Salman Khan Films required a website that reflected its prestige and
+            creative authority — one that would feel modern not just today, but
+            years into the future.
+          </p>
+          <p className="text-[16px] leading-[16px] text-justify mt-2">
+            We designed a fully custom website rooted in filmmaking language:
+            intentional animations, elegant whitespace, strong typography, and
+            smooth transitions. The focus was sophistication through restraint,
+            not trend-driven visuals.
+          </p>
+
+          <div className="text-[16px] leading-[16px] text-justify mt-2 mt-auto">
+            <span className="font-bold mb-2">Outcome:</span> <br></br>{" "}
+            <p className="mt-2">
+              Since launch, multiple major releases have occurred, yet the site
+              hasn’t required redesign or felt outdated. The architecture has
+              remained contemporary across film cycles — proving that thoughtful
+              design sustains relevance.
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  };
+  const ProposalCard10 = () => {
+    return (
+      <div
+        ref={Card10}
+        className="w-[70vw] h-[75vh] bg-[white] cardD rounded-[10px]  flex  absolute top-[100%] text-[#1A42C2] left-1/2 -translate-x-1/2 "
+      >
+        {/* Left */}
+        <div className="w-1/2 h-full flex flex-col">
+          {/* img */}
+          <div className="w-full  h-full mt-auto overflow-hidden group">
+            <img
+              src={`/CC1.jpg`}
+              alt="img"
+              className="w-full h-full object-cover object-center transition-all duration-200 ease-in group-hover:scale-[1.015]"
+            />
+          </div>
+        </div>
+
+        {/* Right */}
+        <div className="w-1/2 h-full flex flex-col py-10 px-5">
+          <span className="font-bold text-[16px] leading-[16px] uppercase">
+            CASE STUDY 2 :
+          </span>
+          <p className="text-[1.8vw] leading-[1.8vw] uppercase  flex mt-2 ">
+            {" "}
+            RPSG MEDIA
+          </p>
+          <p className="text-[1.5vw] leading-[1.5vw] capitalize mt-4 ">
+            Custom CMS + Websites for Premium Publishing Brands
+          </p>
+          <p className="text-[16px] leading-[16px] text-justify flex mt-6">
+            RPSG Media needed enterprise-grade digital platforms for The
+            Hollywood Reporter India, Esquire India, and Robb Report India that
+            matched global brand standards. Off-the-shelf WordPress templates
+            couldn’t support their scale, prestige, or different editorial
+            needs.
+          </p>
+          <p className="text-[16px] leading-[16px] text-justify mt-2">
+            We built a fully custom CMS with a unified backend and
+            brand-specific frontends tailored to each publication’s identity and
+            workflow. The system supports breaking news, feature publishing, and
+            luxury curation — simple enough for 100+ editors to use without
+            training.
+          </p>
+
+          <div className="text-[16px] leading-[16px] text-justify mt-2 mt-auto">
+            <span className="font-bold mb-2">Outcome:</span> <br></br>{" "}
+            <p className="mt-2">
+              {" "}
+              Within 12 months, all three publications ranked among the top in
+              their categories, serving 3M+ monthly users. The infrastructure
+              now powers editorial excellence at scale.
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  };
+  const ProposalCard11 = () => {
+    return (
+      <div
+        ref={Card11}
+        className="w-[70vw] h-[75vh] bg-[#1A42C2] cardD rounded-[10px]  flex  absolute top-[100%] text-white left-1/2 -translate-x-1/2 "
+      >
+        {/* ======================================================= */}
+        {/* Left */}
+        <div className="w-1/2 h-full flex flex-col">
+          {/* img */}
+          <div className="w-full  h-full mt-auto overflow-hidden group">
+            <img
+              src={`/CC2.jpg`}
+              alt="img"
+              className="w-full h-full object-cover object-center transition-all duration-200 ease-in group-hover:scale-[1.015]"
+            />
+          </div>
+        </div>
+
+        {/* Right */}
+        <div className="w-1/2 h-full flex flex-col py-10 px-5">
+          <span className="font-bold text-[16px] leading-[16px] uppercase">
+            CASE STUDY 3 :
+          </span>
+          <p className="text-[1.8vw] leading-[1.8vw] uppercase  flex mt-2 ">
+            MANIFEST
+          </p>
+          <p className="text-[1.5vw] leading-[1.5vw] capitalize mt-4 ">
+            WordPress to Custom Platform Migration
+          </p>
+          <p className="text-[16px] leading-[16px] text-justify flex mt-6">
+            Manifest, a wedding & lifestyle magazine, had five years of
+            WordPress content and strong SEO authority but hit a growth ceiling.
+            They needed a full migration to a custom platform — without losing
+            data, breaking URLs, or affecting traffic.
+          </p>
+          <p className="text-[16px] leading-[16px] text-justify mt-2">
+            We built custom middleware to automate the migration of hundreds of
+            articles, thousands of images, and all metadata in a single
+            operation. Every URL was preserved with proper 301 redirects, and
+            deployment happened overnight with zero downtime.
+          </p>
+
+          <div className="text-[16px] leading-[16px] text-justify mt-2 mt-auto">
+            <span className="font-bold mb-2">Outcome:</span> <br></br>{" "}
+            <p className="mt-2">
+              Traffic grew by 200%. There was zero data loss, zero broken links,
+              and page speed improved by 60%. The brand retained its full
+              institutional value while unlocking new editorial capabilities.
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  };
+  const ProposalCard12 = () => {
+    return (
+      <div
+        ref={Card12}
+        className="w-[70vw] h-[75vh] bg-[white] cardD rounded-[10px] gap-5 flex p-10 absolute top-[100%] text-[#1A42C2] left-1/2 -translate-x-1/2 "
       >
         {/* left */}
         <div className="w-1/2 h-full flex flex-col justify-between">
@@ -1359,120 +1527,6 @@ const Proposal = () => {
               alt="IMG"
               className="w-full h-full object-center object-cover group-hover:scale-[1.01] transition-all duration-200 ease-in will-change-transform"
             />
-          </div>
-        </div>
-      </div>
-    );
-  };
-  const ProposalCard10 = () => {
-    return (
-      <div
-        ref={Card10}
-        className="w-[70vw] h-[75vh] bg-[white] cardD rounded-[10px] gap-5 flex p-10 absolute top-[100%] text-[#1A42C2] left-1/2 -translate-x-1/2 "
-      >
-        {/* Left */}
-        <div className="w-1/2 h-full flex flex-col">
-          <div className="w-full h-fit text-[2vw] leading-[2vw] tracking-tighter">
-            <span className="font-bold">CASE STUDY 1 : </span> RPSG MEDIA
-          </div>
-
-          {/* img */}
-          <div className="w-full h-[90%] mt-auto overflow-hidden group">
-            <img src={`/CC1.jpg`} alt="img" className="w-full h-full object-cover object-center transition-all duration-200 ease-in group-hover:scale-[1.015]" />
-          </div>
-        </div>
-
-        {/* Right */}
-        <div className="w-1/2 h-full flex flex-col">
-          <p className="text-[2.5vw] leading-[2.5vw] uppercase ">Custom CMS + Websites for Premium Publishing Brands</p>
-          <p className="text-[16px] leading-[16px] text-justify mt-4">
-            RPSG Media needed enterprise-grade digital platforms for The
-            Hollywood Reporter India, Esquire India, and Robb Report India that
-            matched global brand standards. Off-the-shelf WordPress templates
-            couldn’t support their scale, prestige, or different editorial
-            needs.
-          </p>
-          <p className="text-[16px] leading-[16px] text-justify mt-1">
-            We built a fully custom CMS with a unified backend and
-            brand-specific frontends tailored to each publication’s identity and
-            workflow. The system supports breaking news, feature publishing, and
-            luxury curation — simple enough for 100+ editors to use without
-            training.
-          </p>
-
-          <div className="text-[16px] leading-[16px] text-justify mt-2 mt-auto">
-            <span className="font-bold mb-2">Outcome:</span> <br></br> <p className="mt-2"> Within 12 months, all three publications ranked among the
-            top in their categories, serving 3M+ monthly users. The
-            infrastructure now powers editorial excellence at scale.</p>
-          </div>
-        </div>
-      </div>
-    );
-  };
-  const ProposalCard11 = () => {
-    return (
-      <div
-        ref={Card11}
-        className="w-[70vw] h-[75vh] bg-[#1A42C2] cardD rounded-[10px] gap-5 flex p-10 absolute top-[100%] text-white left-1/2 -translate-x-1/2 "
-      >
-
-         {/* Left */}
-        <div className="w-1/2 h-full flex flex-col">
-          <div className="w-full h-fit text-[2vw] leading-[2vw] tracking-tighter">
-            <span className="font-bold">CASE STUDY 2 : </span> MANIFEST
-          </div>
-
-          {/* img */}
-          <div className="w-full h-[90%] mt-auto overflow-hidden group">
-            <img src={`/CC2.jpg`} alt="img" className="w-full h-full object-cover object-center transition-all duration-200 ease-in group-hover:scale-[1.015]" />
-          </div>
-        </div>
-
-        {/* Right */}
-        <div className="w-1/2 h-full flex flex-col">
-         <p className="text-[2.5vw] leading-[2.5vw] uppercase ">WordPress to Custom Platform Migration</p>
-          <p className="text-[16px] leading-[16px] text-justify mt-4">
-           Manifest, a wedding & lifestyle magazine, had five years of WordPress content and strong SEO authority but hit a growth ceiling. They needed a full migration to a custom platform — without losing data, breaking URLs, or affecting traffic.
-          </p>
-          <p className="text-[16px] leading-[16px] text-justify mt-1">
-           We built custom middleware to automate the migration of hundreds of articles, thousands of images, and all metadata in a single operation. Every URL was preserved with proper 301 redirects, and deployment happened overnight with zero downtime.
-          </p>
-
-          <div className="text-[16px] leading-[16px] text-justify mt-2 mt-auto">
-            <span className="font-bold mb-2">Outcome:</span> <br></br> <p className="mt-2"> Traffic grew by 200%. There was zero data loss, zero broken links, and page speed improved by 60%. The brand retained its full institutional value while unlocking new editorial capabilities.</p>
-          </div>
-        </div>
-      </div>
-    );
-  };
-  const ProposalCard12 = () => {
-    return (
-      <div
-        ref={Card12}
-        className="w-[70vw] h-[75vh] bg-[white] cardD rounded-[10px] gap-5 flex p-10 absolute top-[100%] text-[#1A42C2] left-1/2 -translate-x-1/2 "
-      >
-         {/* Left */}
-        <div className="w-1/2 h-full flex flex-col">
-          <div className="w-full h-fit text-[2vw] leading-[2vw] tracking-tighter">
-            <span className="font-bold">CASE STUDY 3 : </span> SALMAN KHAN FILMS
-          </div>
-
-          {/* img */}
-          <div className="w-full h-[90%] mt-auto overflow-hidden group">
-            <img src={`/CC3.jpg`} alt="img" className="w-full h-full object-cover object-center transition-all duration-200 ease-in group-hover:scale-[1.015]" />
-          </div>
-        </div>
-
-        {/* Right */}
-        <div className="w-1/2 h-full flex flex-col">
-        <p className="text-[2.5vw] leading-[2.5vw] uppercase ">Custom Showcase Website for a Leading Production House</p>
-          <p className="text-[16px] leading-[16px] text-justify mt-4">
-           Salman Khan Films required a website that reflected its prestige and creative authority — one that would feel modern not just today, but years into the future.</p>
-          <p className="text-[16px] leading-[16px] text-justify mt-1">
-           We designed a fully custom website rooted in filmmaking language: intentional animations, elegant whitespace, strong typography, and smooth transitions. The focus was sophistication through restraint, not trend-driven visuals.</p>
-
-          <div className="text-[16px] leading-[16px] text-justify mt-2 mt-auto">
-            <span className="font-bold mb-2">Outcome:</span> <br></br> <p className="mt-2"> Since launch, multiple major releases have occurred, yet the site hasn’t required redesign or felt outdated. The architecture has remained contemporary across film cycles — proving that thoughtful design sustains relevance.</p>
           </div>
         </div>
       </div>
